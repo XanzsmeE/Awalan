@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman dengan Tombol Arah</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://i.pinimg.com/564x/e6/9a/93/e69a9390acd0482e4e371b73a2159f39.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            opacity: 0; /* Awalnya atur opasitas menjadi 0 */
+            animation: fadeInUp 1s ease forwards; /* Animasi fade-in dan translasi ke atas selama 1 detik */
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0; /* Dimulai dengan opasitas 0 */
+                transform: translate(100%, 100%); /* Dimulai dari posisi kanan bawah */
+            }
+            100% {
+                opacity: 1; /* Selesai dengan opasitas 1 */
+                transform: translate(0, 0); /* Selesai di posisi awal (kiri atas) */
+            }
+        }
+        .button-container {
+            text-align: center;
+        }
+        .btn {
+            background-color: #8B4513; /* Warna coklat */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px; /* Memperbesar ukuran teks tombol */
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px; /* Membuat sisi-sisi tombol menjadi tumpul */
+            font-family: Monospace; /* Mengubah font menjadi Monospace */
+            transition: transform 0.2s ease; /* Transisi transformasi saat tombol aktif */
+        }
+        .btn:active {
+            transform: scale(1.1); /* Tombol membesar saat ditekan */
+        }
+        h2 {
+            font-family: Monospace;
+            font-size: 24px; /* Memperbesar ukuran teks h2 */
+            color: white;
+            margin-bottom: 5px; /* Mengurangi margin bawah h2 */
+        }
+        .small-text {
+            font-family: Arial, sans-serif;
+            font-size: 12px; /* Ukuran teks super kecil */
+            color: white;
+            margin-top: 0; /* Menghilangkan margin atas */
+        }
+        .social-logo {
+            position: absolute;
+            top: 10px;
+            width: 30px; /* Ukuran logo Instagram dan TikTok */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease; /* Transisi transformasi saat logo ditekan */
+        }
+        .instagram-logo {
+            left: 10px;
+        }
+        .tiktok-logo {
+            left: 50px; /* Jarak antara logo Instagram dan TikTok */
+            border-radius: 10px; /* Membuat sisi-sisi logo TikTok menjadi tumpul */
+        }
+        .social-logo:hover {
+            transform: scale(1.1); /* Logo membesar saat dihover */
+        }
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <a href="https://www.instagram.com/iilhm.mm?igsh=MmdkdGF0bWNncnc0" target="_blank">
+            <img class="social-logo instagram-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+        </a>
+        <a href="https://www.tiktok.com/@102938el?_t=8ngkO96IlyU&_r=1" target="_blank">
+            <img class="social-logo tiktok-logo" src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338429_960_720.png" alt="TikTok Logo">
+        </a>
+        <div class="button-container">
+            <h2>Gamaliel Kurniawan Parapak</h2>
+            <p class="small-text">Pelajar SMP</p>
+            <button class="btn" id="dataDiriButton">Data Diri --></button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript untuk mengatur aksi klik tombol
+        document.getElementById('dataDiriButton').onclick = function() {
+            // Tambahkan animasi atau efek lain sesuai kebutuhan di sini
+            window.location.href = 'https://xanzsmee.github.io/Gamaliel/';
+        };
+
+        // JavaScript untuk memastikan animasi background dimulai setelah konten utama muncul
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = '1'; // Menjadikan opacity body menjadi 1 setelah konten dimuat
+        });
+    </script>
+</body>
+</html>
